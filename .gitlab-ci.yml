@@ -1,7 +1,7 @@
 image: ayufan/rock64-dockerfiles:x86_64
 
 variables:
-  GITHUB_USER: ayufan-rock64
+  GITHUB_USER: ljishen
   GITHUB_REPO: linux-rootfs
 
   VERSION: ${CI_COMMIT_TAG}
@@ -52,23 +52,5 @@ release:
   when: manual
   allow_failure: true
 
-ubuntu-bionic-mate-armhf: *build_manual
-ubuntu-bionic-mate-arm64: *build_manual
-
-ubuntu-disco-mate-armhf: *build_manual
-ubuntu-disco-mate-arm64: *build_manual
-
-debian-stretch-openmediavault-armhf: *build_manual
-debian-stretch-openmediavault-arm64: *build_manual
-
-debian-stretch-minimal-armhf: *build
-debian-stretch-minimal-arm64: *build
-
-debian-buster-minimal-armhf: *build
-debian-buster-minimal-arm64: *build
-
-ubuntu-bionic-minimal-armhf: *build
 ubuntu-bionic-minimal-arm64: *build
-
-ubuntu-disco-minimal-armhf: *build
-ubuntu-disco-minimal-arm64: *build
+ubuntu-xenial-minimal-arm64: *build
